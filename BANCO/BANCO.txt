@@ -1,0 +1,135 @@
+CREATE DATABASE sistema;
+
+USE sistema;
+
+_________________________________________________________________________________________________________________________________
+
+CREATE TABLE ANALISE_MEDICA(
+id INT AUTO_INCREMENT PRIMARY KEY,
+idPaciente INT,
+tipoAnalise VARCHAR(50),
+preco FLOAT(7,2),
+dataAnalise DATE,
+horarioAnalise CHAR(5),
+concluido BOOLEAN,
+anexo VARCHAR (100),
+obs TEXT
+);
+
+
+
+CREATE TABLE pacientes (
+  id int PRIMARY KEY AUTO_INCREMENT,
+  nome varchar(80),
+  conveniado boolean,
+  email varchar(100),
+  dataNascimento date,
+  sexo char(1),
+  RGpaciente char(9),
+  CPFpaciente char(11),
+  ddd char(2),
+  numero varchar (9),
+  regiao char (1)
+);
+
+CREATE TABLE colaboradores (
+	ID_colaboradores	 INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nomeColaborador		 VARCHAR(30),
+	rgColaborador		 CHAR(12),
+	cpfColaborador		 CHAR(14),
+	especialidade		 VARCHAR(20),
+	obs			 VARCHAR(50),
+	dataAdmissao		 DATE,
+	dataDemissao		 DATE,
+	departamento		 VARCHAR(30),
+	sala			 CHAR(4),
+	tipoContrato		 VARCHAR(15),
+	tipoRemuneracao		 VARCHAR(10),
+	tipoPagamento		 VARCHAR(10),
+	remuneColaborador	 VARCHAR(10),
+	valorColaborador	 INT(10),
+	descVT			 BOOLEAN,
+	descVR			 BOOLEAN,
+	hraEntrada		 TIME,
+	hraSaida		 TIME,
+	jDom			 CHAR(3),
+	jSeg			 CHAR(3),
+	jTer			 CHAR(3),
+	jQua			 CHAR(3),
+	jQui			 CHAR(3),
+	jSex			 CHAR(3),
+	jSab			 CHAR(3)
+		
+);
+
+CREATE TABLE AGENDAMENTO (
+	ProtocoloAgendamento INT AUTO_INCREMENT PRIMARY KEY,
+	id_paciente INT,
+	id_colaboradores INT,
+	DiaConsulta DATE,
+	Hora CHAR (5),
+	Atendido TINYINT,
+	obs TEXT	
+);
+
+
+____________________________________________________________________________________________________________________________________
+
+INSERT INTO ANALISE_MEDICA (idPaciente,tipoAnalise,preco,dataAnalise,horarioAnalise,concluido,anexo,obs) VALUES (
+'6',
+'Colesterol',
+'10.00',
+'2019-10-29',
+'13:00',
+'1',
+'exame.jpg',
+'Colesterol em nivel comum'
+);
+
+INSERT INTO pacientes
+(nome, conveniado, email, dataNascimento, 
+sexo, RGpaciente, CPFpaciente, ddd, numero, regiao)
+VALUES ('José', 1, 'josé@email.com', '2000-11-19', 
+'M', '305658987', '78065232489', '22', '26592321', 'C');
+
+
+___________________________________________________________________________________________________________________________________
+SELECT * FROM ANALISE_MEDICA;
+
+SELECT * FROM pacientes WHERE id = 12;
+
+select * from agendamento;
+___________________________________________________________________________________________________________________________________
+DELETE FROM ANALISE_MEDICA WHERE id=6;
+
+DELETE FROM pacientes WHERE id = 23;
+
+delete  from agendamento where ProtocoloAgendamento=7;
+___________________________________________________________________________________________________________________________________
+UPDATE ANALISE_MEDICA SET 
+idPaciente='6',
+tipoAnalise='Urina Tipo 1',
+preco='8.00',
+dataAnalise='2019-10-29',
+horarioAnalise='14:00',
+concluido='1',
+obs='Urina muito amarelada',
+anexo='exame2.jpg' 
+WHERE id='6';
+
+
+UPDATE pacientes SET  
+nome = 'Fernanda',
+conveniado = 0,
+email = 'fernanda@email.com',
+dataNascimento = '1995-12-10',
+sexo = 'F',
+RGpaciente = '405251232',
+CPFpaciente = '56987412525',	
+ddd = '63',
+numero = '32237989',
+regiao = 'S'
+WHERE id = 2;
+
+
+__________________________________________________________________________________________________________________________________

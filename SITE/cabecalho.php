@@ -8,7 +8,13 @@
     $listagemAgendamento ="../agendamento/listagem.php";
     $colaboradorForm = "../colaborador/formCad1.php";
     $listagemColaborador = "../colaborador/listagem1.php";
+    $prontuarioForm = "../prontuarios/cadClinica.php";
+    $listagemProntuario = "../prontuarios/listagemProntuario.php";
     if(isset($arquivo)){
+        if($arquivo == "cadClinica.php" || $arquivo == "listagemProntuario.php"){
+            $prontuarioForm = "cadClinica.php";
+            $listagemProntuario = "listagemProntuario.php";
+        }
         if($arquivo == "formCad1.php"||$arquivo == "listagem1.php"){
             $colaboradorForm = "formCad1.php";
             $listagemColaborador = "listagem1.php";
@@ -35,6 +41,8 @@
             $listagemAgendamento ="agendamento/listagem.php";
             $colaboradorForm = "colaborador/formCad1.php";
             $listagemColaborador = "colaborador/listagem1.php";
+            $prontuarioForm = "prontuarios/cadClinica.php";
+            $listagemProntuario = "prontuarios/listagemProntuario.php";
         }
     }
 ?>
@@ -57,6 +65,15 @@
                         <div class="dropdown-menu bg-dark">
                             <a class="dropdown-item text-light" href="<?php echo $agendamentoForm ?>">Cadastro Agendamento</a>
                             <a class="dropdown-item text-light" href="<?php echo $listagemAgendamento ?>">Listagem Agendamento</a>
+                        </div>  
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
+                             Prontuario 
+                        </a>
+                        <div class="dropdown-menu bg-dark">
+                            <a class="dropdown-item text-light" href="<?php echo $prontuarioForm ?>">Cadastro Prontuario</a>
+                            <a class="dropdown-item text-light" href="<?php echo $listagemProntuario ?>">Listagem Prontuario</a>
                         </div>  
                     </li>
                     <li class="nav-item dropdown">

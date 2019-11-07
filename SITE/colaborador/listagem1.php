@@ -17,7 +17,7 @@
 	
 	ini_set('default_charset','UTF-8');
 
-	include "conexao.php";
+	include "../conexao.php";
 	mysqli_set_charset($con, 'utf8');
 	$comandoSQL = "SELECT * FROM colaboradores" ;
 	mysqli_query($con, $comandoSQL) or die("Erro na selecao de dados" . mysqli_error($con));

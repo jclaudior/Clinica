@@ -13,7 +13,7 @@
 		include('../cabecalho.php');
 		
 		$codigo = $_GET["id"];
-		include("conecta.php");
+		include("../conexao.php");
 		
 		$sql = "select * from pacientes where id = $codigo";
 		

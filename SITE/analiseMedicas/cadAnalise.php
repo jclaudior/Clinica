@@ -56,11 +56,12 @@ if($nomeAnexo <> ""){
         echo "Erro ao mover arquivo";
 }
 
-require("conecta.php");
+require("../conexao.php");
 
 $sql = "INSERT INTO ANALISE_MEDICA (idPaciente,tipoAnalise,preco,dataAnalise,horarioAnalise,concluido,anexo,obs) VALUES ('$paciente','$tipo','$preco','$data','$hora','$concluido','$nomeAnexo','$obs')";
 
 mysqli_query($con,$sql) or die("Erro ao gravar informações no Banco de dados ". mysqli_error($econ));
 
-echo "Cadastro Realizado com Sucesso!!";
+echo "Cadastro Realizado com Sucesso!!<br>";
+echo "<a href='analiseForm.php'>Voltar</a>"
 ?>

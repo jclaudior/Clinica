@@ -11,7 +11,7 @@
 <?php
 	
 	//se conectando ao banco
-	include("conecta.php");
+	include("../conexao.php");
 		
 	// criando o comando SQL para exibir os dados na tela da tabela de pacientes
 	$sql = "select * from pacientes";

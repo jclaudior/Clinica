@@ -2,7 +2,7 @@
 	
 	$id = $_GET["id"];
 	//se conectando ao banco
-	include("conecta.php");
+	include("../conexao.php");
 		
 	// criando o comando SQL para excluir dados
 	$sql = "delete from pacientes where id = $id";

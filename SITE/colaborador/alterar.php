@@ -1,28 +1,28 @@
 <html lang="pt-br">	
 	<head>
-		<title>Alteração de Colaborador</title>
+		<title>Alteraï¿½ï¿½o de Colaborador</title>
 	</head>
 	
 	<body>
 		<center>
 
-		<h2>Alteração de Colaborador</h2>
+		<h2>Alteraï¿½ï¿½o de Colaborador</h2>
 
 		<?php
 			if(! isset($_GET['c']))
-			die("Forma de chamada da rotina de alteração incorreta!!");
+			die("Forma de chamada da rotina de alteraï¿½ï¿½o incorreta!!");
 			$codigo = $_GET['c'];
-			include "conexao.php";
+			include "../conexao.php";
 			$sql = "SELECT * FROM colaboradores WHERE ID_colaboradores=$codigo";
 			// Executar o comando ($sql) no MYSQL
 			$registro = mysqli_query($con, $sql);
 			// Encontrou ?
 			$linhas = mysqli_num_rows($registro);
 			if ($linhas<1) {
-				// Não encontrou
-				die("Time id: $codigo não existe mais");
+				// Nï¿½o encontrou
+				die("Time id: $codigo nï¿½o existe mais");
 			}
-			// Criar $dados que e um vetor/matriz da 1ª linha
+			// Criar $dados que e um vetor/matriz da 1ï¿½ linha
 			$dados = mysqli_fetch_array($registro);
 			// Transferindo dados do vetor p/ variaveis
 			$nomeCola 		= $dados["nomeColaborador"];
@@ -73,10 +73,10 @@
 						<td><input type="text" name="especialidadeColaborador" maxlength="20" size="16" placeholder="Especialidade" required value="<?php echo $espCola; ?>"></td>
 					</tr>
 					<tr>
-						<th colspan="8">Observações</th>
+						<th colspan="8">Observaï¿½ï¿½es</th>
 					</tr>
 					<tr>
-						<td colspan="8"><textarea name="obsColaborador" rows="10" cols="83" placeholder="Informações complementares"><?php echo $obsCola; ?></textarea></td>
+						<td colspan="8"><textarea name="obsColaborador" rows="10" cols="83" placeholder="Informaï¿½ï¿½es complementares"><?php echo $obsCola; ?></textarea></td>
 					</tr>
 				</table>
 			</fieldset>
@@ -84,9 +84,9 @@
 				<legend><h2>Dados Para Cadastro</h2></legend>
 					<table border="1">
 						<tr>
-							<th>Data Admissão:</th>
+							<th>Data Admissï¿½o:</th>
 							<td><input type="date" name="dataAdmiColaborador" value="<?php echo $admiCola; ?>"></td>
-							<th>Data Demissão:</th>
+							<th>Data Demissï¿½o:</th>
 							<td><input type="date" name="dataDemiColaborador" value="<?php echo $demiCola; ?>"></td>
 						</tr>
 						<tr>
@@ -127,7 +127,7 @@
 							$checkHorario ="checked";
 						?>
 						<tr>
-							<th>Tipo de Remuneração:</th>
+							<th>Tipo de Remuneraï¿½ï¿½o:</th>
 							<td colspan="3"><center>
 								<input type="radio" name="tipoRemune" value="Mensal" <?php echo $checkMensal;?>>Mensal
 								<input type="radio" name="tipoRemune" value="Quinzenal" <?php echo $checkQuinzenal;?>>Quinzenal
@@ -160,7 +160,7 @@
 							$checkVariavel ="checked";
 						?>
 						<tr>
-							<th>Remuneração:</th>
+							<th>Remuneraï¿½ï¿½o:</th>
 							<td><center>
 								<input type="radio" name="remuneColaborador" value="Fixa" <?php echo $checkFixa;?>>Fixa
 								<input type="radio" name="remuneColaborador" value="Variavel" <?php echo $checkVariavel;?>>Variavel</center>
@@ -189,12 +189,12 @@
 							<th>Descontar VT:</th>
 							<td><center>
 								<input type="radio" name="descVTColaborador" value="1" <?php echo $checkdVtColaS;?>>Sim
-								<input type="radio" name="descVTColaborador" value="0" <?php echo $checkdVtColaN;?>>Não</center>
+								<input type="radio" name="descVTColaborador" value="0" <?php echo $checkdVtColaN;?>>Nï¿½o</center>
 							</td>
 							<th>Descontar VR/VA:</th>
 							<td><center>
 								<input type="radio" name="descVRColaborador" value="1" <?php echo $checkdVrColaS;?>>Sim
-								<input type="radio" name="descVRColaborador" value="0" <?php echo $checkdVrColaN;?>>Não</center>
+								<input type="radio" name="descVRColaborador" value="0" <?php echo $checkdVrColaN;?>>Nï¿½o</center>
 							</td>
 						</tr>
 					</table><br>
@@ -205,11 +205,11 @@
 						<tr>
 							<td></td>
 							<th>Entrada</th>
-							<th>Saída</th>
+							<th>Saï¿½da</th>
 							<th>Dias da semana a considerar</th>
 						</tr>
 						<tr>
-							<th>Horário</th>
+							<th>Horï¿½rio</th>
 								<td><input type="time" name="tabEntra" maxlength="4" size="16" value="<?php echo $entCola; ?>"></td>
 								<td><input type="time" name="tabSai" maxlength="4" size="16" value="<?php echo $saiCola; ?>"></td>
 							<td>

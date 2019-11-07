@@ -20,7 +20,7 @@
 			if(! isset($_GET['c']))
 			die("Forma de chamada da rotina de alteração incorreta!!");
 			$codigo = $_GET['c'];
-			include "conexao.php";
+			include "../conexao.php";
 			$sql = "SELECT * FROM colaboradores WHERE ID_colaboradores=$codigo";
 			// Executar o comando ($sql) no MYSQL
 			$registro = mysqli_query($con, $sql);

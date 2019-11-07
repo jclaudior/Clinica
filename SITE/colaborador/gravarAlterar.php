@@ -61,7 +61,7 @@
 		$dsSabCola= $_POST["tabDiaSemSab"]; 
 
 	// Conectando no MYSQL e abrindo o banco
-	include 'conexao.php';
+	include '../conexao.php';
 	// Criando a variável $sql com o comando de atualização SQL
 
 	$sql = "UPDATE colaboradores SET 

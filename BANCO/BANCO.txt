@@ -93,16 +93,81 @@ VALUES ('José', 1, 'josé@email.com', '2000-11-19',
 'M', '305658987', '78065232489', '22', '26592321', 'C');
 
 
+INSERT INTO colaboradores (
+nomeColaborador, 
+rgColaborador, 
+cpfColaborador, 
+especialidade , 
+obs, 
+dataAdmissao, 
+dataDemissao, 
+departamento, 
+sala, 
+tipoContrato, 
+tipoRemuneracao, 
+tipoPagamento, 
+remuneColaborador, 
+valorColaborador, 
+descVT, 
+descVR, 
+hraEntrada, 
+hraSaida, 
+jDom, 
+jSeg, 
+jTer, 
+jQua, 
+jQui, 
+jSex, 
+jSab)
+			
+VALUES(
+'Allan', 
+'50.517.113-2', 
+'475.183.768-06', 
+'TECNICO', 
+'BLABLABLA', 
+'2018-11-04', 
+'2019-11-04', 
+'TI', 
+'255', 
+'Indeterminado', 
+'Mensal', 
+'Mensal', 
+'Fixa', 
+'800', 
+'0', 
+'0', 
+'08:00:00', 
+'16:00:00', 
+'', 
+'Seg', 
+'Ter', 
+'Qua', 
+'Qui', 
+'Sex', 
+'');
+
+
+
+INSERT INTO AGENDAMENTO 
+(id_paciente,id_colaboradores,DiaConsulta,Hora,Atendido,obs) 
+VALUES ('32','55','2019-11-01','13:30','1','');
+
+
 ___________________________________________________________________________________________________________________________________
 SELECT * FROM ANALISE_MEDICA;
 
 SELECT * FROM pacientes WHERE id = 12;
+
+SELECT * FROM colaboradores WHERE ID_colaboradores = 1;
 
 select * from agendamento;
 ___________________________________________________________________________________________________________________________________
 DELETE FROM ANALISE_MEDICA WHERE id=6;
 
 DELETE FROM pacientes WHERE id = 23;
+
+DELETE FROM colaboradores WHERE ID_colaboradores = 1;
 
 delete  from agendamento where ProtocoloAgendamento=7;
 ___________________________________________________________________________________________________________________________________
@@ -131,5 +196,7 @@ numero = '32237989',
 regiao = 'S'
 WHERE id = 2;
 
+UPDATE colaboradores SET sala = 4200 WHERE ID_colaboradores = 1;
 
+UPDATE agendamento SET id_paciente='43',id_colaboradores='66',DiaConsulta='2019-11-01',Hora='00:00',Atendido='1',obs='para analise medicas' where ProtocoloAgendamento = '1'
 __________________________________________________________________________________________________________________________________

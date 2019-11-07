@@ -41,7 +41,7 @@
     if(empty($hora))
         die("Horario da consulta Invalida  <br> Cadastro cancelado");
     
-    require("conecta.php");
+    require("../conexao.php");
 
     $sql = "UPDATE ANALISE_MEDICA SET idPaciente='$paciente',tipoAnalise='$tipo',preco='$preco',dataAnalise='$data',horarioAnalise='$hora',concluido='$concluido',obs='$obs'";
     

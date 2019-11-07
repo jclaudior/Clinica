@@ -33,7 +33,7 @@ echo "Atendido: $atendido <br>";
 echo "Observações: $obs <br>";
 
 
-include 'conexao.php';
+include '../conexao.php';
 $sql = "UPDATE agendamento SET id_paciente='$paciente',id_colaboradores='$colaborador',DiaConsulta='$data',Hora='$hora',Atendido='$atendido',obs='$obs' where ProtocoloAgendamento = '$id'";  
 mysqli_query($con,$sql) or die("Erro ao gravar informações no Banco de dados ". mysqli_error($con));
 

@@ -15,7 +15,7 @@
             <br>
             <h1 class="display-3">Listagem de Analises</h1>
             <?php
-            require("conecta.php");
+            require("../conexao.php");
             $sql = "SELECT * FROM ANALISE_MEDICA";
 
             $registro = mysqli_query($con,$sql) or die ("Erro ao Executar comando do sql " . mysqli_error($con));

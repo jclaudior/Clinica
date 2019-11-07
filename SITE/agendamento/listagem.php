@@ -11,7 +11,7 @@
         $arquivo = substr(strrchr(__FILE__, DIRECTORY_SEPARATOR), 1);
         include('../cabecalho.php');
 		echo "<br><h1 class='display-3'>Listagem Agendamento</h1>";
-$con = mysqli_connect ('localhost', 'root','', 'sistema') or die("erro ao conectar o banco de dados ".mysqli_error($con));
+include('../conexao.php');
 $sql="select * from agendamento";
 $registro = mysqli_query ($con, $sql) or die("erro ao executar comando sql". mysqli_error ($con));
 $linhas = mysqli_num_rows($registro);

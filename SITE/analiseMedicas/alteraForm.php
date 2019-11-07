@@ -16,7 +16,7 @@
         <h1 class="display-3 mt-5">Alteração de Analise</h1>
         <hr>
         <?php
-            require('conecta.php');
+            require('../conexao.php');
             
             if(empty($_GET['id']))
                 die("Chamada para alteração Invalida!");

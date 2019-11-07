@@ -76,7 +76,7 @@
 
 	//Conexao
 
-	include "conexao.php";
+	include "../conexao.php";
 	$sql = "insert into colaboradores (
 			nomeColaborador, rgColaborador, cpfColaborador, especialidade , obs, dataAdmissao, dataDemissao, departamento, sala, tipoContrato, tipoRemuneracao, tipoPagamento, remuneColaborador, valorColaborador, descVT, descVR, hraEntrada, hraSaida, jDom, jSeg, jTer, jQua, jQui, jSex, jSab) 
 			VALUES('$nomeCola', '$rgCola', '$cpfCola', '$espCola', '$obsCola', '$admiCola', '$demiCola', '$depCola', '$salaCola', '$tConCola', '$tRemuCola', '$tPgmtCola', '$remuneCola', '$valorCola', '$dVtCola', '$dVrCola', '$entCola', '$saiCola', '$dsDomCola', '$dsSegCola', '$dsTerCola', '$dsQuaCola', '$dsQuiCola', '$dsSexCola', '$dsSabCola')";

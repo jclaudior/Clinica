@@ -1,5 +1,5 @@
 <?php
-	include ("conecta.php");
+	include ("../conexao.php");
 	
 	if(! isset($_POST['id'])) die ("Chamada da rotina incorreta");
 	

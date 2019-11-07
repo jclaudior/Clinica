@@ -51,7 +51,7 @@
 	}
 	
 	// conectando ao servidor MySql
-	include("conecta.php");
+	include("../conexao.php");
 	
 	// criando o comando SQL para inserir dados na tabela de pacientes
 	$sql = "INSERT INTO pacientes(nome, conveniado, email, dataNascimento, sexo, RGpaciente, CPFpaciente, ddd, numero, regiao) 
@@ -61,6 +61,6 @@
 	mysqli_query($con, $sql) or die ("Erro na inserção de dados em pacientes".mysqli_error($con)."$sql");
 	
 	echo "Cadastro finalizado com sucesso<br>";
-	echo "<a href='Clinica.html'> Cadastrar novamente </a> <br>";
+	echo "<a href='Clinica.php'> Cadastrar novamente </a> <br>";
 	echo "<a href='ListagemClinica.php'> Listagem de dados </a>";
 ?>

@@ -6,7 +6,7 @@
     <body>
         <h2>Exclusão de Analise</h2>
         <?php
-        require("conecta.php");
+        require("../conexao.php");
         if(empty($_GET['id']))
             die("Chamada para exclusão invalida!");
             $id = $_GET['id'];

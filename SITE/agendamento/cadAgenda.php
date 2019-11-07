@@ -28,8 +28,8 @@ echo "hora: $hora <br>";
 echo "Atendido: $atendido <br>";
 echo "Observações: $obs <br>";
 
-
-$con = mysqli_connect('localhost','root','','sistema') or die("Erro ao conectar ao banco de dados ".mysqli_error($con));
+include('../conexao.php');
+//$con = mysqli_connect('localhost','root','','sistema') or die("Erro ao conectar ao banco de dados ".mysqli_error($con));
 $sql = "INSERT INTO AGENDAMENTO (id_paciente,id_colaboradores,DiaConsulta,Hora,Atendido,obs) VALUES ('$paciente','$colaborador','$data','$hora','$atendido','$obs')";
 
 mysqli_query($con,$sql) or die("Erro ao gravar informações no Banco de dados ". mysqli_error($econ));

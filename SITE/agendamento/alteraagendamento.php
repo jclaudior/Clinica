@@ -9,7 +9,7 @@
 	<?php
         $arquivo = substr(strrchr(__FILE__, DIRECTORY_SEPARATOR), 1);
 		include('../cabecalho.php');
-		include 'conexao.php';
+		include '../conexao.php';
 		$id = $_GET['id'];
 		$sql="select * From agendamento where ProtocoloAgendamento=$id";
 		$registro=mysqli_query ($con,$sql) or die ("erro ao executar comando mysql".mysqli_error($con));

@@ -17,9 +17,10 @@ $registro = mysqli_query ($con, $sql) or die("erro ao executar comando sql". mys
 $linhas = mysqli_num_rows($registro);
 
 if ($linhas <1){ 
-die ("agendamento está vazia");
+echo "agendamento está vazia";
 
-}
+}else{
+
 
 echo "registros encontrados $linhas";
 $cont = 0;
@@ -65,7 +66,8 @@ echo "
 	}
 	echo "</table>";
 	echo "listagem finalizada<br>";
-	echo"<a class='btn btn-dark' href='agendamento.php'>Cadastrar</a></div>";
+}
+	echo"<br><a class='btn btn-dark' href='agendamento.php'>Cadastrar</a></div>";
 		
 
 

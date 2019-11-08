@@ -31,8 +31,8 @@
 	$linhas = mysqli_num_rows($registros3);
 
 	if ($linhas<1) {
-		die("Cadastro de Times esta vazio");
-	}
+		echo "Cadastro de Times esta vazio";
+	}else{
 
 	echo "<center>";
 
@@ -169,7 +169,7 @@
 		echo "</table>";
 
 		echo "</fieldset><br><br>";
-
+		}
 		echo "<br><a class='btn btn-dark' href='formCad1.php'>Cadastro</a>";
 
 	echo "</center>";

@@ -21,9 +21,9 @@
             $registro = mysqli_query($con,$sql) or die ("Erro ao Executar comando do sql " . mysqli_error($con));
             $linhas = mysqli_num_rows($registro);
 
-            if($linhas < 1)
-                die ("Analise Médicas esta vazia!");
-        
+            if($linhas < 1){
+                echo "Analise Médicas esta vazia!";
+            }else{
             echo "Registros encontrados $linhas<br>";
 
             $cont = 0;
@@ -86,7 +86,9 @@
             }
             echo "</table>";
             echo "Listagem finalizada!";
+            }
             ?>
+            
             <br>
             <a class="btn btn-dark" href="analiseForm.php">Cadastrar</a>
         </div>

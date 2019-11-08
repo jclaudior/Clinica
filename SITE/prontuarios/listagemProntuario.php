@@ -39,11 +39,12 @@ while ($registros = mysqli_fetch_array($rs)){
 	echo "<td> <a href='alterarProntuario.php?id=$id'>Alterar</a></tr>";
 }
 echo "</table>";
-
+echo "<a href='cadClinica.php' class='btn btn-dark'>Cadastrar</a>";
 include('../rodape.php');
 
 
 ?>
+	
 	<script src="../node_modules/jquery/jquery.js"></script>
     <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>

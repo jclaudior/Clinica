@@ -42,7 +42,7 @@
             <div class="row">
                 <div class="col-12 text-center my-5 p-2">
                     <h1 class="display-2">Venha Sorrir!</h1>
-                    <h6 class="mt-4">Nossa clinica tem os mais diversos tipos de tratamentos odontologicos e Analises médicas para seu tratamento. A melhor equipe com os melhores proficionais de Divesas areas para cuidader do seu Sorriso e de sua Saude.</h6>
+                    <h6 class="mt-4">Nossa clinica tem os mais diversos tipos de tratamentos odontologicos e Analises médicas para seu tratamento. A melhor equipe com os melhores profissionais de Divesas areas para cuidader do seu Sorriso e de sua Saude.</h6>
                     <br>
                 </div>
             </div>
@@ -51,7 +51,7 @@
             <div class="row">
                 <div class="col-12 text-center my-1 mt-5 p-2">
                     <h1 class="display-3">Quem Somos!</h1>
-                    <h6 class="mt-4">A mais de 10 anos no mercado de Odontologia, Temos o orgulho de atender nossos pacientes com a melhor tecnoclogia e proficionais na aréa. Espaços reservados para analises médicas de alta precisão e rapides. Nosso orgulho esta no seu sorriso e bem estar!.</h6>
+                    <h6 class="mt-4">A mais de 10 anos no mercado de Odontologia, Temos o orgulho de atender nossos pacientes com a melhor tecnoclogia e profissionais na aréa. Espaços reservados para analises médicas de alta precisão e rapides. Nosso orgulho esta no seu sorriso e bem estar!.</h6>
                     <br>
                 </div>
             </div>
